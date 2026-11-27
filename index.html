@@ -149,8 +149,8 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .price { font-family: var(--font-display); font-weight: 800; font-size: 2.3rem; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
 .price small { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
 .plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; align-content: start; }
-.plan li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; font-size: 0.97rem; }
-.plan li::before { content: ""; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; background: var(--sea-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%230b5e5a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.plan li { position: relative; padding-left: 30px; font-size: 0.97rem; }
+.plan li::before { content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--sea-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%230b5e5a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
 .plan .btn { justify-content: center; }
 .plan:not(.best) .btn { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
 .terms { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
@@ -188,8 +188,25 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
   .phone { width: min(100%, 280px); }
   .work { grid-template-columns: 1fr; }
   .work .shot img { aspect-ratio: 4 / 5; }
-  .plans { grid-template-columns: 1fr; }
-  .plan.best { order: -1; }
+  .plans { grid-template-columns: 1fr; gap: 22px; }
+  .plan { padding: 24px 20px; gap: 12px; }
+  .plan:not(.open) li.no, .plan:not(.open) li:nth-child(n+7) { display: none; }
+  .more { display: block; }
+  section { padding-block: 52px; }
+  .head { margin-bottom: 26px; }
+  .brand span { display: none; }
+  .hero { padding-block: 16px 48px; gap: 36px; }
+  .phone { width: min(100%, 230px); border-radius: 28px; border-width: 7px; }
+  .proof { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; padding-top: 20px; }
+  .proof b { font-size: 1.3rem; }
+  .proof span { font-size: 0.8rem; line-height: 1.35; }
+  .values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .value { padding: 18px 16px; gap: 6px; }
+  .value b { font-size: 1.7rem; }
+  .value h3 { font-size: 1rem; }
+  .value p { display: none; }
+  .flow { gap: 10px; }
+  .flow > div { padding: 16px 18px; gap: 4px; }
   .steps { padding-left: 52px; }
   .track { left: 15px; }
   .step::before { left: -46px; }
@@ -201,6 +218,8 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
 .plan li.no::before { background: var(--line) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10h8' fill='none' stroke='%23778a87' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
 .plan li b { font-weight: 700; color: var(--ink); }
 .plan { grid-template-rows: auto auto auto auto 1fr auto; }
+.more { display: none; justify-self: start; background: none; border: 0; padding: 4px 0; color: var(--sea); font: 700 0.95rem var(--font-body); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 760px) { .more { display: block; } }
 </style>
 </head>
 <body>
@@ -301,6 +320,7 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
           <li class="no">Joylash, muqova va profilni yuritish</li>
           <li class="no">Oylik hisobot</li>
         </ul>
+        <button class="more" type="button">Batafsil ko'rish</button>
         <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! &quot;Reels&quot; (1-paket) haqida bilmoqchiman." target="_blank" rel="noopener">1-paketni tanlash</a>
       </div>
       <div class="plan best">
@@ -321,6 +341,7 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
           <li class="no">Joylash, muqova va profilni yuritish</li>
           <li class="no">Oylik hisobot</li>
         </ul>
+        <button class="more" type="button">Batafsil ko'rish</button>
         <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! &quot;Reels + Strategiya&quot; (2-paket) haqida bilmoqchiman." target="_blank" rel="noopener">2-paketni tanlash</a>
       </div>
       <div class="plan">
@@ -340,6 +361,7 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
           <li>Joylash, muqova va profilni yuritish</li>
           <li>Oylik hisobot: ko'rishlar, obunachilar, xabarlar</li>
         </ul>
+        <button class="more" type="button">Batafsil ko'rish</button>
         <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! &quot;To'liq boshqaruv&quot; (3-paket) haqida bilmoqchiman." target="_blank" rel="noopener">3-paketni tanlash</a>
       </div>
     </div>
@@ -392,6 +414,14 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
       s.textContent = v.muted ? 'Ovozni yoqish' : 'Ovozni o\'chirish';
     });
   }
+
+  document.querySelectorAll('.more').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var p = b.closest('.plan');
+      var open = p.classList.toggle('open');
+      b.textContent = open ? 'Kamroq ko\'rsatish' : 'Batafsil ko\'rish';
+    });
+  });
 
   var copyBtn = document.getElementById('copy-handle');
   if (copyBtn) {
