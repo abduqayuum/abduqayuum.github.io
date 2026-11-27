@@ -87,10 +87,7 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .hero h1 em { font-style: normal; color: var(--sun); }
 .hero .lead { margin-bottom: 30px; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.proof { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 40px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,0.12); }
-.proof div { display: grid; gap: 2px; }
-.proof b { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; }
-.proof span { color: var(--night-muted); font-size: 0.9rem; }
+.cta-note { margin-top: 14px; font-size: 0.95rem; color: var(--night-muted); }
 
 .phone { position: relative; width: min(100%, 320px); margin-inline: auto; aspect-ratio: 9 / 16; border-radius: 34px; border: 9px solid var(--frame); background: var(--frame); overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.06); }
 .phone video { width: 100%; height: 100%; object-fit: cover; }
@@ -192,21 +189,35 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
   .plan { padding: 24px 20px; gap: 12px; }
   .plan:not(.open) li.no, .plan:not(.open) li:nth-child(n+7) { display: none; }
   .more { display: block; }
+  body { font-size: 16px; }
   section { padding-block: 52px; }
-  .head { margin-bottom: 26px; }
-  .brand span { display: none; }
-  .hero { padding-block: 16px 48px; gap: 36px; }
-  .phone { width: min(100%, 230px); border-radius: 28px; border-width: 7px; }
-  .proof { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 28px; padding-top: 20px; }
-  .proof b { font-size: 1.3rem; }
-  .proof span { font-size: 0.8rem; line-height: 1.35; }
+  .head { margin-bottom: 24px; gap: 10px; }
+  h2 { font-size: 1.85rem; }
+  .lead { font-size: 1.02rem; }
+  .topbar { padding-block: 14px; gap: 12px; }
+  .brand { font-size: 0.88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .toplink { font-size: 0.88rem; white-space: nowrap; flex: none; }
+  .kicker { font-size: 0.72rem; letter-spacing: 0.1em; }
+  .hero { padding-block: 18px 52px; gap: 32px; }
+  .hero h1 { font-size: 2.55rem; margin-block: 14px 14px; }
+  .hero .lead { margin-bottom: 24px; }
+  .hero .btn-sun { width: 100%; justify-content: center; font-size: 1.05rem; padding: 16px 20px; }
+  .hero .btn-ghost { display: none; }
+  .cta-note { text-align: center; font-size: 0.9rem; }
+  .phone { width: min(100%, 240px); border-radius: 28px; border-width: 7px; }
+  .process h2 { font-size: 2rem; }
+  .flow > div { grid-template-columns: 96px 1fr; align-items: baseline; gap: 12px; padding: 14px 16px; }
+  .flow h3 { font-size: 1.08rem; }
+  .flow p { display: none; }
+  .final h2 { font-size: 2.1rem; }
   .values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .value { padding: 18px 16px; gap: 6px; }
   .value b { font-size: 1.7rem; }
   .value h3 { font-size: 1rem; }
   .value p { display: none; }
-  .flow { gap: 10px; }
-  .flow > div { padding: 16px 18px; gap: 4px; }
+  .flow { gap: 8px; }
+  .mbar { transform: translateY(110%); transition: transform .25s ease; }
+  .mbar.show { transform: none; }
   .steps { padding-left: 52px; }
   .track { left: 15px; }
   .step::before { left: -46px; }
@@ -235,19 +246,15 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
       <div>
         <span class="kicker"><span class="rec" aria-hidden="true"></span>Istanbuldagi o'zbek bizneslari uchun</span>
         <h1>Instagramingiz <em>mijoz olib kelsin.</em></h1>
-        <p class="lead">Oyiga 15 ta tayyor Reels. Professional kamera, mikrofon va yorug'lik bilan suratga olaman, kreativ montaj qilaman.</p>
+        <p class="lead">Oyiga 15 ta professional Reels. Suratga olish va montaj mendan.</p>
         <div class="actions">
           <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! Biznesim uchun 10 ta Reels g'oyasini olmoqchiman." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.7c-1.3.5-1.2 1.3-.2 1.6l4.7 1.5 1.8 5.6c.2.7.4.9.9.9.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8L23 4.9c.3-1.3-.5-1.9-1.6-1.3zM9.6 14.2l8.7-7.9c.4-.3 0-.5-.5-.2l-10.6 6.7"/></svg>
-            Telegramga yozing: 10 ta g'oya bepul
+            Telegramga yozing
           </a>
           <a class="btn btn-ghost" href="#paketlar">Narxlar</a>
         </div>
-        <div class="proof">
-          <div><b>4K</b><span>professional kamera</span></div>
-          <div><b>Haftalik</b><span>tayyor videolar</span></div>
-          <div><b>Kafolat</b><span>kechiksa, 1 ta Reels bepul</span></div>
-        </div>
+        <p class="cta-note">🎁 Biznesingizga mos 10 ta Reels g'oyasi bepul</p>
       </div>
       <div class="phone">
         <video id="reel" src="assets/reel.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
@@ -280,7 +287,7 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
     <div class="head">
       <span class="kicker">Kafolat · 7 kunda tayyor</span>
       <h2>Montaj haftada 1 marta, hammasi birdan.</h2>
-      <p class="lead">Har kuni bittadan emas. Bir haftalik Reels'ni montaj qilib, 7 kun ichida hammasini birdan yuboraman. Kechiksa, o'sha suratga olish uchun 1 ta Reels bepul qilib beraman.</p>
+      <p class="lead">Har kuni bittadan emas: bir haftalik videolar 7 kun ichida birdan keladi. Kechiksa, 1 ta Reels bepul.</p>
     </div>
     <div class="flow">
       <div><span class="tc">1-kun</span><h3>Suratga olamiz</h3><p>Belgilangan joyda bir haftalik Reels'ni tasvirga tushiramiz.</p></div>
@@ -422,6 +429,19 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
       b.textContent = open ? 'Kamroq ko\'rsatish' : 'Batafsil ko\'rish';
     });
   });
+
+  var mbar = document.querySelector('.mbar');
+  var ctas = [document.querySelector('.hero .actions'), document.querySelector('.gift')];
+  if (mbar && 'IntersectionObserver' in window) {
+    var seen = new Map();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { seen.set(e.target, e.isIntersecting); });
+      var anyVisible = Array.from(seen.values()).some(Boolean);
+      var heroTop = ctas[0].getBoundingClientRect().top;
+      mbar.classList.toggle('show', !anyVisible && heroTop < 0);
+    });
+    ctas.forEach(function (el) { if (el) io.observe(el); });
+  } else if (mbar) { mbar.classList.add('show'); }
 
   var copyBtn = document.getElementById('copy-handle');
   if (copyBtn) {
