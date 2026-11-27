@@ -106,6 +106,9 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .value { background: var(--surface); padding: 28px 24px; display: grid; gap: 10px; align-content: start; min-width: 0; }
 .value b { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em; color: var(--sea); line-height: 1; }
 .value p { color: var(--muted); }
+.vhead { display: grid; gap: 14px; justify-items: start; align-content: start; }
+.vicon { width: 42px; height: 42px; border-radius: 12px; background: var(--sea-soft); color: var(--sea); display: grid; place-items: center; }
+.vicon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .uzline { margin-top: 22px; padding: 22px 24px; border-radius: var(--r); background: var(--sea-soft); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .uzline p { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; flex: 1 1 320px; min-width: 0; }
 
@@ -214,7 +217,10 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
   .final h2 { font-size: 2.1rem; }
   .values { grid-template-columns: 1fr; }
   .value { grid-template-columns: 96px 1fr; column-gap: 14px; row-gap: 4px; padding: 18px 16px; }
-  .value b { font-size: 1.55rem; grid-row: span 2; }
+  .vhead { grid-row: span 2; gap: 8px; }
+  .vicon { width: 36px; height: 36px; border-radius: 10px; }
+  .vicon svg { width: 19px; height: 19px; }
+  .value b { font-size: 1.45rem; }
   .value h3 { font-size: 1.02rem; }
   .value p { font-size: 0.94rem; }
   .flow { gap: 8px; }
@@ -230,6 +236,10 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
 .plan li.no { color: var(--muted); opacity: 0.55; }
 .plan li.no::before { background: var(--line) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10h8' fill='none' stroke='%23778a87' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
 .plan li b { font-weight: 700; color: var(--ink); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .plan li:not(.no)::before { background: var(--sea) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%23062020' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+}
+:root[data-theme="dark"] .plan li:not(.no)::before { background: var(--sea) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%23062020' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
 .plan { grid-template-rows: auto auto auto auto 1fr auto; }
 .more { display: none; justify-self: start; background: none; border: 0; padding: 4px 0; color: var(--sea); font: 700 0.95rem var(--font-body); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 760px) { .more { display: block; } }
@@ -275,10 +285,10 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
       <h2>Siz biznes bilan bandsiz, sahifangiz ketaveradi.</h2>
     </div>
     <div class="values">
-      <div class="value"><b>15 ta</b><h3>sifatli Reels har oy</h3><p>Professional kamerada olingan. Sahifangiz hech qachon bo'sh turmaydi.</p></div>
-      <div class="value"><b>10 yil</b><h3>tajriba</h3><p>Siz bilan ko'p yillik tajribaga ega videograf va montajchi ishlaydi.</p></div>
-      <div class="value"><b>4K</b><h3>professional texnika</h3><p>Professional kamera, mikrofon va yorug'lik bilan suratga olinadi va montaj qilinadi.</p></div>
-      <div class="value"><b>Ko'p ko'rish</b><h3>uchun tuzilgan</h3><p>Birinchi soniyadan e'tiborni tortadigan, oxirigacha ko'riladigan Reels.</p></div>
+      <div class="value"><div class="vhead"><span class="vicon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 8.5v7l6-3.5z"/></svg></span><b>15 ta</b></div><h3>sifatli Reels har oy</h3><p>Professional kamerada olingan. Sahifangiz hech qachon bo'sh turmaydi.</p></div>
+      <div class="value"><div class="vhead"><span class="vicon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg></span><b>10 yil</b></div><h3>tajriba</h3><p>Siz bilan ko'p yillik tajribaga ega videograf va montajchi ishlaydi.</p></div>
+      <div class="value"><div class="vhead"><span class="vicon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg></span><b>4K</b></div><h3>professional texnika</h3><p>Professional kamera, mikrofon va yorug'lik bilan suratga olinadi va montaj qilinadi.</p></div>
+      <div class="value"><div class="vhead"><span class="vicon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><b>Ko'p ko'rish</b></div><h3>uchun tuzilgan</h3><p>Birinchi soniyadan e'tiborni tortadigan, oxirigacha ko'riladigan Reels.</p></div>
     </div>
   </div>
 </section>
