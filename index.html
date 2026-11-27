@@ -212,11 +212,11 @@ footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem
   .flow h3 { font-size: 1.08rem; }
   .flow p { display: none; }
   .final h2 { font-size: 2.1rem; }
-  .values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .value { padding: 18px 16px; gap: 6px; }
-  .value b { font-size: 1.7rem; }
-  .value h3 { font-size: 1rem; }
-  .value p { display: none; }
+  .values { grid-template-columns: 1fr; }
+  .value { grid-template-columns: 96px 1fr; column-gap: 14px; row-gap: 4px; padding: 18px 16px; }
+  .value b { font-size: 1.55rem; grid-row: span 2; }
+  .value h3 { font-size: 1.02rem; }
+  .value p { font-size: 0.94rem; }
   .flow { gap: 8px; }
   .mbar { transform: translateY(110%); transition: transform .25s ease; }
   .mbar.show { transform: none; }
