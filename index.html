@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Abduqayum Shokirov Reels</title>
+<meta name="description" content="Istanbuldagi o'zbek bizneslari uchun Reels: oyiga 15 ta tayyor video, suratga olish va montaj bilan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: one story read top to bottom. Dark "night Bosphorus" bands open and close the page; light bands carry the argument. Golden-hour amber is reserved for the one action: write on Telegram. */
+:root {
+  --bg: #f3f6f5;
+  --surface: #ffffff;
+  --ink: #0f1d1c;
+  --muted: #4f6260;
+  --line: #d9e2df;
+  --sea: #0b5e5a;
+  --sea-soft: #dcecea;
+  --sun: #e39a2d;
+  --sun-ink: #8a520a;
+  --sun-soft: #fbecd2;
+  --on-sun: #1b1307;
+  --night: #0b1a1a;
+  --night-2: #12282a;
+  --night-ink: #eef4f2;
+  --night-muted: #a9bdb9;
+  --frame: #0a0f0f;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --r: 14px;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1414; --surface: #111f1e; --ink: #e8f0ee; --muted: #9fb3af; --line: #22322f;
+    --sea: #4fc2b8; --sea-soft: #133432; --sun: #f0a845; --sun-ink: #f6c27a; --sun-soft: #3a2a12;
+    --night: #060e0e; --night-2: #0d1c1c; --frame: #000000;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1414; --surface: #111f1e; --ink: #e8f0ee; --muted: #9fb3af; --line: #22322f;
+  --sea: #4fc2b8; --sea-soft: #133432; --sun: #f0a845; --sun-ink: #f6c27a; --sun-soft: #3a2a12;
+  --night: #060e0e; --night-2: #0d1c1c; --frame: #000000;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16.5px; line-height: 1.6; }
+.inner { max-width: var(--wrap); margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.08; text-wrap: balance; }
+h2 { font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 800; letter-spacing: -0.02em; }
+h3 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; }
+img, video { max-width: 100%; display: block; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 6px; }
+.kicker { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sea); display: inline-flex; align-items: center; gap: 10px; }
+.rec { width: 9px; height: 9px; border-radius: 50%; background: #e5483b; display: inline-block; box-shadow: 0 0 0 4px rgba(229,72,59,0.18); }
+.lead { font-size: 1.12rem; color: var(--muted); max-width: 60ch; }
+section { padding-block: clamp(64px, 9vw, 112px); }
+.head { display: grid; gap: 14px; margin-bottom: clamp(32px, 5vw, 52px); max-width: 760px; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; border-radius: 999px; padding: 15px 24px; font-size: 1rem; line-height: 1.2; transition: transform .15s ease, filter .15s ease; }
+.btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+.btn-sun { background: var(--sun); color: var(--on-sun); }
+.btn-ghost { color: inherit; border: 1.5px solid currentColor; opacity: 0.9; }
+.btn svg { width: 20px; height: 20px; flex: none; }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+
+/* top bar + hero (one dark band) */
+.night { background: var(--night); color: var(--night-ink); }
+.night .lead { color: var(--night-muted); }
+.night .kicker { color: var(--sun); }
+.hero-band { margin-top: calc(-1 * env(safe-area-inset-top, 0px)); padding-top: env(safe-area-inset-top, 0px); }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 20px; }
+.brand { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+.brand span { color: var(--night-muted); font-weight: 500; }
+.toplink { font-weight: 600; font-size: 0.95rem; text-decoration: none; color: var(--sun); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(32px, 6vw, 80px); align-items: center; padding-block: clamp(28px, 5vw, 56px) clamp(56px, 8vw, 96px); }
+.hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 800; letter-spacing: -0.035em; margin-block: 18px 20px; }
+.hero h1 em { font-style: normal; color: var(--sun); }
+.hero .lead { margin-bottom: 30px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.proof { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 40px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,0.12); }
+.proof div { display: grid; gap: 2px; }
+.proof b { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; }
+.proof span { color: var(--night-muted); font-size: 0.9rem; }
+
+.phone { position: relative; width: min(100%, 320px); margin-inline: auto; aspect-ratio: 9 / 16; border-radius: 34px; border: 9px solid var(--frame); background: var(--frame); overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.06); }
+.phone video { width: 100%; height: 100%; object-fit: cover; }
+.phone .hud { position: absolute; inset: 12px 12px auto; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.72rem; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.6); pointer-events: none; }
+.phone .hud span { display: inline-flex; align-items: center; gap: 6px; }
+.sound { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); background: rgba(10,15,15,0.72); color: #fff; border: 0; border-radius: 999px; padding: 8px 14px; font: 600 0.82rem var(--font-body); cursor: pointer; backdrop-filter: blur(6px); }
+
+/* pain */
+.pains { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.pain { padding: 22px; border-radius: var(--r); background: var(--surface); border: 1px solid var(--line); display: grid; gap: 8px; align-content: start; }
+.pain .x { font-family: var(--font-mono); font-size: 0.8rem; color: #c2463a; }
+.pain p { color: var(--muted); }
+
+/* values */
+.values { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.value { background: var(--surface); padding: 28px 24px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.value b { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em; color: var(--sea); line-height: 1; }
+.value p { color: var(--muted); }
+.uzline { margin-top: 22px; padding: 22px 24px; border-radius: var(--r); background: var(--sea-soft); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.uzline p { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; flex: 1 1 320px; min-width: 0; }
+
+/* process (scroll story) */
+.process { background: var(--surface); border-block: 1px solid var(--line); }
+.process h2 { font-size: clamp(2.4rem, 6vw, 4rem); }
+.tc { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; color: var(--sea); }
+.flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.flow > div { background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 24px; display: grid; gap: 8px; align-content: start; }
+.flow h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+.flow p { color: var(--muted); }
+.rhythm { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.rhythm div { padding: 16px 18px; border-radius: 12px; background: var(--sun-soft); color: var(--sun-ink); font-size: 0.98rem; }
+.rhythm b { font-family: var(--font-display); font-size: 1.15rem; }
+
+/* work */
+.work { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.shot { margin: 0; display: grid; gap: 10px; }
+.shot img { width: 100%; aspect-ratio: 9 / 14; object-fit: cover; border-radius: var(--r); background: var(--line); }
+.shot figcaption { font-size: 0.92rem; color: var(--muted); }
+.shot figcaption b { color: var(--ink); display: block; }
+
+/* about */
+.about { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.about img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: var(--r); }
+.about .txt { display: grid; gap: 16px; }
+.about .txt p { font-size: 1.08rem; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; }
+.facts span { font-size: 0.88rem; font-weight: 600; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+
+/* pricing */
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.plan { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px 24px; display: grid; gap: 14px; grid-template-rows: auto auto auto 1fr auto; }
+.plan.best { border: 2px solid var(--sun); box-shadow: 0 18px 50px rgba(227,154,45,0.16); position: relative; }
+.badge { position: absolute; top: -13px; left: 24px; background: var(--sun); color: var(--on-sun); font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
+.plan .num { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.plan .for { color: var(--muted); font-size: 0.95rem; }
+.price { font-family: var(--font-display); font-weight: 800; font-size: 2.3rem; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.price small { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+.plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; align-content: start; }
+.plan li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; font-size: 0.97rem; }
+.plan li::before { content: ""; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; background: var(--sea-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' fill='none' stroke='%230b5e5a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.plan .btn { justify-content: center; }
+.plan:not(.best) .btn { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.terms { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.terms div { padding: 16px 18px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); font-size: 0.95rem; }
+.terms b { display: block; font-family: var(--font-display); font-size: 1.02rem; }
+
+/* faq */
+.faq { display: grid; gap: 10px; max-width: 820px; }
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.faq summary { cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--font-mono); color: var(--sea); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin-top: 10px; color: var(--muted); }
+
+/* final CTA */
+.final { text-align: left; }
+.final .box { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); gap: 32px; align-items: center; }
+.final h2 { color: var(--night-ink); font-size: clamp(2.3rem, 6vw, 4rem); }
+.final h2 em { font-style: normal; color: var(--sun); }
+.final .lead { margin-top: 16px; }
+.gift { background: var(--night-2); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; padding: 26px; display: grid; gap: 14px; }
+.gift .big { font-family: var(--font-display); font-size: 3.6rem; font-weight: 800; line-height: 0.9; color: var(--sun); }
+.gift p { color: var(--night-muted); }
+.handle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 12px; border-radius: 10px; background: rgba(255,255,255,0.06); font-family: var(--font-mono); font-size: 0.92rem; }
+.handle span { user-select: all; overflow-wrap: anywhere; min-width: 0; }
+.handle button { background: transparent; color: var(--night-ink); border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; padding: 6px 10px; font: 600 0.8rem var(--font-body); cursor: pointer; flex: none; }
+.gift .btn { justify-content: center; }
+footer { padding-block: 26px 40px; color: var(--night-muted); font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.08); }
+
+/* mobile bar */
+.mbar { display: none; }
+@media (max-width: 760px) {
+  .hero, .about, .final .box { grid-template-columns: 1fr; }
+  .phone { width: min(100%, 280px); }
+  .work { grid-template-columns: 1fr; }
+  .work .shot img { aspect-ratio: 4 / 5; }
+  .plans { grid-template-columns: 1fr; }
+  .plan.best { order: -1; }
+  .steps { padding-left: 52px; }
+  .track { left: 15px; }
+  .step::before { left: -46px; }
+  .mbar { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px max(14px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); background: var(--night); border-top: 1px solid rgba(255,255,255,0.1); }
+  .mbar .btn { width: 100%; justify-content: center; padding: 13px 18px; }
+  body { padding-bottom: 78px; }
+}
+.plan li.no { color: var(--muted); opacity: 0.55; }
+.plan li.no::before { background: var(--line) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10h8' fill='none' stroke='%23778a87' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.plan li b { font-weight: 700; color: var(--ink); }
+.plan { grid-template-rows: auto auto auto auto 1fr auto; }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="night hero-band">
+  <div class="inner">
+    <div class="topbar">
+      <div class="brand">Abduqayum Shokirov <span>· videograf, Istanbul</span></div>
+      <a class="toplink" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! Biznesim uchun 10 ta Reels g'oyasini olmoqchiman." target="_blank" rel="noopener">Telegram</a>
+    </div>
+    <div class="hero">
+      <div>
+        <span class="kicker"><span class="rec" aria-hidden="true"></span>Istanbuldagi o'zbek bizneslari uchun</span>
+        <h1>Instagramingiz <em>mijoz olib kelsin.</em></h1>
+        <p class="lead">Oyiga 15 ta tayyor Reels. Professional kamera, mikrofon va yorug'lik bilan suratga olaman, kreativ montaj qilaman.</p>
+        <div class="actions">
+          <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! Biznesim uchun 10 ta Reels g'oyasini olmoqchiman." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.7c-1.3.5-1.2 1.3-.2 1.6l4.7 1.5 1.8 5.6c.2.7.4.9.9.9.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8L23 4.9c.3-1.3-.5-1.9-1.6-1.3zM9.6 14.2l8.7-7.9c.4-.3 0-.5-.5-.2l-10.6 6.7"/></svg>
+            Telegramga yozing: 10 ta g'oya bepul
+          </a>
+          <a class="btn btn-ghost" href="#paketlar">Narxlar</a>
+        </div>
+        <div class="proof">
+          <div><b>4K</b><span>professional kamera</span></div>
+          <div><b>Haftalik</b><span>tayyor videolar</span></div>
+          <div><b>Kafolat</b><span>kechiksa, 1 ta Reels bepul</span></div>
+        </div>
+      </div>
+      <div class="phone">
+        <video id="reel" src="assets/reel.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="hud"><span><span class="rec" aria-hidden="true"></span>REC</span><span>00:24</span></div>
+        <button class="sound" id="sound" type="button">Ovozni yoqish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ QIYMAT ============ -->
+<section>
+  <div class="inner">
+    <div class="head">
+      <span class="kicker">Siz nima olasiz</span>
+      <h2>Siz biznes bilan bandsiz, sahifangiz ketaveradi.</h2>
+    </div>
+    <div class="values">
+      <div class="value"><b>15 ta</b><h3>sifatli Reels har oy</h3><p>Professional kamerada olingan. Sahifangiz hech qachon bo'sh turmaydi.</p></div>
+      <div class="value"><b>10 yil</b><h3>tajriba</h3><p>Siz bilan ko'p yillik tajribaga ega videograf va montajchi ishlaydi.</p></div>
+      <div class="value"><b>4K</b><h3>professional texnika</h3><p>Professional kamera, mikrofon va yorug'lik bilan suratga olinadi va montaj qilinadi.</p></div>
+      <div class="value"><b>Ko'p ko'rish</b><h3>uchun tuzilgan</h3><p>Birinchi soniyadan e'tiborni tortadigan, oxirigacha ko'riladigan Reels.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KAFOLAT ============ -->
+<section class="process" id="kafolat">
+  <div class="inner">
+    <div class="head">
+      <span class="kicker">Kafolat · 7 kunda tayyor</span>
+      <h2>Montaj haftada 1 marta, hammasi birdan.</h2>
+      <p class="lead">Har kuni bittadan emas. Bir haftalik Reels'ni montaj qilib, 7 kun ichida hammasini birdan yuboraman. Kechiksa, o'sha suratga olish uchun 1 ta Reels bepul qilib beraman.</p>
+    </div>
+    <div class="flow">
+      <div><span class="tc">1-kun</span><h3>Suratga olamiz</h3><p>Belgilangan joyda bir haftalik Reels'ni tasvirga tushiramiz.</p></div>
+      <div><span class="tc">Hafta davomida</span><h3>Montaj qilaman</h3><p>Bir haftalik Reels'ni musiqa, rang va kreativ montaj bilan tayyorlayman.</p></div>
+      <div><span class="tc">7-kungacha</span><h3>Hammasini birdan yuboraman</h3><p>Tayyor videolar bitta paketda, Telegram orqali keladi. 2 ta tuzatish bepul.</p></div>
+      <div><span class="tc">Keyingi hafta</span><h3>Foydalanasiz</h3><p>Tayyor videolardan keyingi hafta davomida foydalanasiz.</p></div>
+    </div>
+    <div class="rhythm">
+      <div><b>Har hafta</b> yangi videolar · 2- va 3-paket</div>
+      <div><b>Har 15 kunda</b> yangi videolar · 1-paket</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAKETLAR ============ -->
+<section id="paketlar">
+  <div class="inner">
+    <div class="head">
+      <span class="kicker">Narxlar</span>
+      <h2>3 ta paket.</h2>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="num">1-paket</span>
+        <h3>Reels</h3>
+        <p class="for">G'oya va ssenariy sizdan, suratga olish va montaj mendan.</p>
+        <div class="price">34 999 <small>TL / oy</small></div>
+        <ul>
+          <li>Oyiga 15 ta Reels</li>
+          <li>Suratga olish: <b>oyda 2 kun</b></li>
+          <li>Kreativ montaj: musiqa, rang</li>
+          <li>2 ta bepul tuzatish</li>
+          <li class="no">Ssenariy va g'oyalarga yordam</li>
+          <li class="no">Ko'proq ko'rish olish bo'yicha maslahat</li>
+          <li class="no">Profil tahlili va eng dolzarb yo'nalish</li>
+          <li class="no">Oylik kontent-reja</li>
+          <li class="no">Joylash, muqova va profilni yuritish</li>
+          <li class="no">Oylik hisobot</li>
+        </ul>
+        <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! &quot;Reels&quot; (1-paket) haqida bilmoqchiman." target="_blank" rel="noopener">1-paketni tanlash</a>
+      </div>
+      <div class="plan best">
+        <span class="badge">Tavsiya etiladi</span>
+        <span class="num">2-paket</span>
+        <h3>Reels + Strategiya</h3>
+        <p class="for">Siz boshqarasiz, men yo'l ko'rsataman.</p>
+        <div class="price">49 999 <small>TL / oy</small></div>
+        <ul>
+          <li>Oyiga 15 ta Reels</li>
+          <li>Suratga olish: <b>oyda 4 kun</b></li>
+          <li>Kreativ montaj: musiqa, rang</li>
+          <li>2 ta bepul tuzatish</li>
+          <li>Ssenariy va g'oyalarga yordam: <b>yaxshilab beraman</b></li>
+          <li>Ko'proq ko'rish olish va mavzu topish bo'yicha maslahat</li>
+          <li class="no">Profil tahlili va eng dolzarb yo'nalish</li>
+          <li class="no">Oylik kontent-reja</li>
+          <li class="no">Joylash, muqova va profilni yuritish</li>
+          <li class="no">Oylik hisobot</li>
+        </ul>
+        <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! &quot;Reels + Strategiya&quot; (2-paket) haqida bilmoqchiman." target="_blank" rel="noopener">2-paketni tanlash</a>
+      </div>
+      <div class="plan">
+        <span class="num">3-paket</span>
+        <h3>To'liq boshqaruv</h3>
+        <p class="for">Siz faqat kelib gapirasiz, qolgan hammasi mendan.</p>
+        <div class="price">69 999 <small>TL / oy</small></div>
+        <ul>
+          <li>Oyiga 15 ta Reels</li>
+          <li>Suratga olish: <b>oyda 4 kun</b></li>
+          <li>Kreativ montaj: musiqa, rang</li>
+          <li>2 ta bepul tuzatish</li>
+          <li>G'oya va ssenariy: <b>to'liq mendan</b></li>
+          <li>Ko'proq ko'rish olish strategiyasi</li>
+          <li>Profil tahlili va eng dolzarb yo'nalish</li>
+          <li>Oylik kontent-reja</li>
+          <li>Joylash, muqova va profilni yuritish</li>
+          <li>Oylik hisobot: ko'rishlar, obunachilar, xabarlar</li>
+        </ul>
+        <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! &quot;To'liq boshqaruv&quot; (3-paket) haqida bilmoqchiman." target="_blank" rel="noopener">3-paketni tanlash</a>
+      </div>
+    </div>
+    <div class="terms">
+      <div><b>Do'stingizni olib keling</b>U to'lov qilsa, sizga 2 ta Reels sovg'a.</div>
+      <div><b>To'lov 2 qismda</b>Oy boshida 50%, 15-kuni 50%.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ YAKUNIY CHAQIRUV ============ -->
+<div class="night" id="yozing">
+  <section class="final">
+    <div class="inner box">
+      <div>
+        <span class="kicker"><span class="rec" aria-hidden="true"></span>Birinchi qadam</span>
+        <h2>Menga yozing. <em>10 ta Reels g'oyasi</em> bepul.</h2>
+        <p class="lead">Biznesingiz haqida 2–3 gap yozing. Sizga mos g'oyalarni aytaman. Hech narsa sotib olish shart emas.</p>
+      </div>
+      <div class="gift">
+        <a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! Biznesim uchun 10 ta Reels g'oyasini olmoqchiman. Biznesim: " target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 3.6 2.9 10.7c-1.3.5-1.2 1.3-.2 1.6l4.7 1.5 1.8 5.6c.2.7.4.9.9.9.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8L23 4.9c.3-1.3-.5-1.9-1.6-1.3zM9.6 14.2l8.7-7.9c.4-.3 0-.5-.5-.2l-10.6 6.7"/></svg>
+          Telegramga yozish
+        </a>
+        <div class="handle"><span id="tg-handle">@abduqayumshokirov</span><button type="button" id="copy-handle">Nusxalash</button></div>
+      </div>
+    </div>
+  </section>
+  <footer><div class="inner">© 2026 Abduqayum Shokirov · Istanbulda videograf</div></footer>
+</div>
+
+<div class="mbar"><a class="btn btn-sun" href="https://t.me/abduqayumshokirov" data-tg="Assalomu alaykum! Biznesim uchun 10 ta Reels g'oyasini olmoqchiman." target="_blank" rel="noopener">Telegramga yozing · 10 ta g'oya bepul</a></div>
+
+<script>
+(function () {
+  var TG = 'https://t.me/abduqayumshokirov';
+  document.querySelectorAll('a[data-tg]').forEach(function (a) {
+    a.href = TG + '?text=' + encodeURIComponent(a.getAttribute('data-tg'));
+  });
+
+  var v = document.getElementById('reel');
+  var s = document.getElementById('sound');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce && v) { v.removeAttribute('autoplay'); try { v.pause(); } catch (e) {} s.textContent = 'Videoni ko\'rish'; }
+  if (s && v) {
+    s.addEventListener('click', function () {
+      if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      v.muted = !v.muted;
+      if (!v.muted) { var q = v.play(); if (q && q.catch) q.catch(function () {}); }
+      s.textContent = v.muted ? 'Ovozni yoqish' : 'Ovozni o\'chirish';
+    });
+  }
+
+  var copyBtn = document.getElementById('copy-handle');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var el = document.getElementById('tg-handle');
+      var done = function () { copyBtn.textContent = 'Nusxalandi'; setTimeout(function () { copyBtn.textContent = 'Nusxalash'; }, 1600); };
+      var fallback = function () { var r = document.createRange(); r.selectNodeContents(el); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); copyBtn.textContent = 'Belgilandi'; };
+      try { navigator.clipboard.writeText(el.textContent).then(done, fallback); } catch (e) { fallback(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>
